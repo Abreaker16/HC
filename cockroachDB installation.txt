@@ -1,0 +1,13 @@
+wget -O cockroach https://binaries.cockroachdb.com/cockroach-latest.linux-amd64
+chmod +x cockroach
+
+sudo mv cockroach /usr/local/bin/
+
+mkdir -p /var/lib/cockroach /var/lib/cockroachdb
+
+cockroach init --insecure --host=[hostname]
+cockroach start --insecure --host=[hostname]    (hostname= vm's public ip)
+cockroach sql --insecure --host=[hostname]
+
+
+
