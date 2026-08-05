@@ -1,65 +1,77 @@
-```gitignore
-# Compiled and build artifacts
-*.pyc
-__pycache__/
-
-# Dependencies
-vendor/
-composer.lock
-
-# Environment
+```
+# Environment variables
 .env
 .env.local
 *.env.*
 
-# Logs and temp files
-*.log
-*.tmp
+# Docker related
+.dockerignore
 
-# Editors
-.vscode/
-.idea/
+# Logs
+*.log
+
+# Temporary files
+*.tmp
 *.swp
 *.swo
 
-# Distribution and build
+# Dependencies
+node_modules/
+venv/
+.venv/
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+target/
+.gradle/
+
+# Build artifacts
 dist/
 build/
-target/
+*.pyc
+*.class
+*.o
+*.exe
+*.dll
+*.so
+*.a
+*.obj
 *.out
 
-# Python specific
-*.pyo
-*.pyd
-*.so
-*.egg-info/
-.coverage
-htmlcov/
-.pytest_cache/
-.mypy_cache/
+# Editor/IDE files
+.vscode/
+.idea/
 
-# Web specific
-*.min.js
-*.min.css
-.sass-cache/
-
-# OS generated files
+# System files
 .DS_Store
 Thumbs.db
-```
 
-Wait, let me reconsider the file changes. Looking at the changes again:
+# Coverage
+coverage/
+htmlcov/
+.coverage
 
-- Added: README.md
-- Deleted: thanxxx.html  
-- Modified: Thanks.php, config.php, details_pdf.php, print-details.php, server.php, server1.php, "your
-
-The only non-source code file I can see that might need ignoring is if there are PHP session files or cache files, but none are explicitly shown in the changes. The changes are primarily PHP source files (.php) which shouldn't be ignored.
-
-Actually, looking more carefully, there's no clear build artifacts, dependency directories, or temporary files in the change list that would require new ignore rules beyond what might already be standard for PHP development. The existing rules would typically handle such cases.
-
-Since the changes are mostly PHP source files and a markdown file, and no clear build artifacts are present in the change list, the output should be empty.
-
-```gitignore
-
+# Compressed files
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
 ```
